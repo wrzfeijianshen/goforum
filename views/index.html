@@ -2,17 +2,39 @@
 <html>
 <body>
 <script>
-document.write("<h1>This is a heading</h1>");
-document.write("<p>This is a paragraph.</p>");
 function jump(){
+	
  window.location.href="/btn";
 }
 function jump1(){
  window.location.href="/btnGet1";
 }
+function jump1(){
+ window.location.href="/btnGet1";
+}
+
+function jump2(num){
+	var str = "https://wb.lejent.cn/api/white_board/handouts/knowledge/?subject=";
+	str += num;
+	jump();
+<!-- 	window.location.href=str;-->
+}
 </script>
-<input type="button" value="我是一个按钮" onclick=javascrtpt:jump1()>
-<input type="button" value="我是一个按钮" onclick=javascrtpt:jump()>
+<label>获取知识点列表</label>  
+<select name=""onchange="javascript:if (this.options[this.selectedIndex].value != '')
+ jump2(this.options[this.selectedIndex].value);
+ this.options[0].selected;" width = "200">  
+
+<option value="0">初中语文</option>  
+<option value="1" >初中数学</option>  
+<option value="2" >初中英语</option> 
+<option value="3" >初中科学</option> 
+<option value="4" >初中数学</option> 
+<option value="5" >初中物理</option> 
+</select>  
+
+<!--<input type="button" value="我是一个按钮" onclick=javascrtpt:jump1()>-->
+<!--<input type="button" value="我是一个按钮" onclick=javascrtpt:jump()>-->
 </body>
 </html>
 
