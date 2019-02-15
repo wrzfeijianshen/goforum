@@ -116,3 +116,11 @@ func (c *BtnGet1Controller) Get() {
 	c.TplName = "btnGet.html"
 
 }
+
+type BtnClickController struct {
+	beego.Controller
+}
+
+func (c *BtnClickController) Get() {
+	c.TplName = "btn.html"
+}
