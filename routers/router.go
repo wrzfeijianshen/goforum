@@ -11,6 +11,9 @@ func init() {
 	beego.Router("/exam", &controllers.ExamController{})
 	beego.Router("/btn", &controllers.BtnController{})
 	beego.Router("/btnGet1", &controllers.BtnGet1Controller{})
+
+	beego.Router("/web/exam", &controllers.WebExamController{})
+
 	// beego.Router("/push_exam_url_msg", &controllers.BtnClickController{})
 
 	beego.Get("/push_exam_url_msg", func(ctx *context.Context) {

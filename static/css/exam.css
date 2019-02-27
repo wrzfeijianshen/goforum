@@ -1,0 +1,148 @@
+html{
+    font-size: 5vw;
+}
+
+body {
+    /*height: 100%;*/
+    background: #ffffff;
+    display: none;
+}
+
+#exam {
+
+}
+
+.question {
+    font-size: 0.3rem;
+    line-height: 0.42rem;
+    padding: 0.4rem;
+}
+
+/*问题里的图片*/
+.quesbody img{
+    width: auto;
+    max-width: 100%;
+}
+.option {
+    margin-top: 0.3rem;
+}
+
+.option .aft_option {
+    /*height: 1.2rem;*/
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.36rem;
+    font-size: 0.3rem;
+}
+
+.option .option-desc {
+    flex: 1;
+}
+
+.option .index {
+    display: inline-block;
+    width: 0.6rem;
+    height: 0.6rem;
+    border: 1px solid #45BB57;
+    border-radius: 0.6rem;
+    text-align: center;
+    line-height: 0.6rem;
+    margin-right: 0.2rem;
+    color: #45bb57;
+}
+
+.option .aft_option.right{
+    color: #45bb57;
+}
+.option .aft_option.right .index{
+    color: #ffffff;
+    background: #45bb57;
+}
+
+.option .aft_option.error{
+    color: #F85955;
+}
+.option .aft_option.error .index{
+    color: #ffffff;
+    background: #F85955;
+    border-color: #F85955;
+}
+
+.analysis {
+    padding: 0.48rem 0.4rem 1.4rem;
+    border-top: 1px solid #E5E5E5;
+    font-size: 0.3rem;
+    display: none;
+    margin-bottom: 0.6rem;
+    /*background: url('../img/logo.png') no-repeat center bottom;*/
+    background-size: 2.2rem auto;
+}
+
+.analysis .correct-answer,
+.analysis .my-answer {
+    margin-right: 0.3rem;
+    position: relative;
+}
+
+.analysis .correct-answer {
+    color: #45bb57;
+}
+
+.analysis .answer-right:after,
+.analysis .answer-error:after {
+    content: "";
+    position: absolute;
+    right: -0.7rem;
+    top: 0;
+    width: 0.4rem;
+    height: 0.4rem;
+    background: #000;
+}
+.analysis .answer-right {
+    color: #45bb57;
+}
+
+.analysis .answer-error {
+    color: #F85955;
+}
+.analysis .answer-right:after {
+    background: url('../img/right-icon.png') no-repeat top left;
+    background-size: auto 100%;
+}
+
+.analysis .answer-error:after {
+    background: url('../img/error-icon.png') no-repeat top left;
+    background-size: auto 100%;
+}
+
+.analysis .analysis-title_p {
+    color: #999999;
+    margin: 0.5rem 0 0.24rem;
+    padding-left: 0.4rem;
+}
+.analysis .analysis-title_p.analysis-title-icon1 {
+    background: url('../img/analysis.png') no-repeat center left;
+    background-size: 0.36rem auto;
+}
+.analysis .analysis-title_p.analysis-title-icon2 {
+    background: url('../img/knowledge-point.png') no-repeat center left;
+    background-size: 0.36rem auto;
+}
+
+.analysis .analysis-desc {
+    line-height: 0.42rem;
+    color: #666666;
+}
+
+.analysis .knowledge-point span{
+    display: inline-block;
+    padding: 0 0.3rem;
+    margin: 0 .1rem 0.16rem 0;
+    height: 0.56rem;
+    line-height: 0.56rem;
+    font-size: 0.26rem;
+    background: #cdecd1;
+    color: #45bb57;
+    border-radius: 0.56rem;
+}

@@ -124,3 +124,51 @@ type BtnClickController struct {
 func (c *BtnClickController) Get() {
 	c.TplName = "btn.html"
 }
+
+type WebExamController struct {
+	beego.Controller
+}
+
+func (c *WebExamController) Get() {
+	c.TplName = "exam.html"
+}
+
+type JS1Controller struct {
+	beego.Controller
+}
+
+func (c *JS1Controller) Get() {
+	c.TplName = "web/pullic.js"
+}
+
+type JS2Controller struct {
+	beego.Controller
+}
+
+func (c *JS2Controller) Get() {
+	c.TplName = "web/exam.css"
+}
+
+type JS3Controller struct {
+	beego.Controller
+}
+
+func (c *JS3Controller) Get() {
+	c.TplName = "web/public.css"
+}
+
+type JS4Controller struct {
+	beego.Controller
+}
+
+func (c *JS4Controller) Get() {
+	c.TplName = "exam.js"
+}
+
+type JS5Controller struct {
+	beego.Controller
+}
+
+func (c *JS5Controller) Get() {
+	c.TplName = "attacka.js"
+}

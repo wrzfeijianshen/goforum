@@ -1,0 +1,264 @@
+/* ===== reset ===== */
+html {
+    overflow-y: scroll;
+    font-size: 62.5%;
+    -webkit-text-size-adjust: 100%;
+}
+/*html * { outline: 0; -webkit-text-size-adjust: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-user-select: none; }*/
+body {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: "Helvetica Light", Helvetica, sans-serif, Arial, tahoma, "Hiragino Sans GB", "Microsoft YaHei", Simsun, Mingliu;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+}
+input, select, textarea {
+    font-size: 100%;
+}
+input, textarea {
+    border-radius: 0; /* -webkit-appearance: none;*/
+}
+input {
+    border: 0 none;
+}
+/*input[type=password]::-webkit-outer-spin-button,input[type=password]::-webkit-inner-spin-button{-webkit-appearance:none;}*/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset, img {
+    border: 0;
+}
+abbr, acronym {
+    border: 0;
+    font-variant: normal;
+}
+del {
+    text-decoration: line-through;
+}
+address, caption, cite, code, dfn, em, strong, th, var, i, b {
+    font-style: normal;
+    font-weight: normal;
+}
+ol, ul {
+    list-style: none;
+}
+caption, th {
+    text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+}
+sup {
+    vertical-align: text-top;
+}
+sub {
+    vertical-align: text-bottom;
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+.clearfix:after {
+    content: ".";
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+}
+/* ===== layout ===== */
+html,
+body {
+    height: 100%;
+}
+body {
+    
+    position: relative;
+    background-color: #fbfbfb;
+}
+#layout-hd {
+    position: absolute;
+    top: 0;
+    right: 70px;
+    left: 70px;
+}
+#layout-hd {
+    height: 80px;
+}
+#layout-hd .breadcrumb {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 18px;
+}
+#layout-hd .breadcrumb a {
+    color: #333;
+}
+#layout-hd .breadcrumb a .icon {
+    display: inline-block;
+    width: 11px;
+    background: url(../img/icon-left.png) no-repeat left center;
+    background-size: 11px 21px;
+    text-indent: -99999px;
+    margin-right: 10px;
+}
+#layout-bd {
+    display: none;
+    position: absolute;
+    top: 100px;
+    right: 70px;
+    bottom: 80px;
+    left: 70px;
+    overflow: auto;
+}
+#layout-bd.with-bg {
+    background-color: #fff;
+    box-shadow: 0 1px 3px #ccc;
+}
+#layout-ft {
+    position: absolute;
+    right: 70px;
+    bottom: 0;
+    left: 70px;
+}
+
+.g-sub-title {
+    display: inline-block;
+    font-size: 14px;
+    color: #333333;
+    padding-right: 30px;
+    background: url(../img/icon-tit.png) no-repeat right center;
+    background-size: 20px 2px;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+/** g-mum-loading **/
+.g-mum-loading {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1006;
+    text-align: center;
+    padding-left: 60px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+@-webkit-keyframes loading {
+    from {
+        opacity: 1;
+        width: 5px;
+        height: 20px;
+    }
+    to {
+        opacity: 0.25;
+        width: 5px;
+        height: 20px;
+    }
+}
+
+.g-mum-loading .lines {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    display: inline-block;
+    zoom: 0.3; /*通过修改这个值(值的区间为0-1)的大小来设置菊花的大小*/
+}
+
+.g-mum-loading .lines div {
+    width: 3px;
+    height: 16px;
+    background: #a4a2a4;
+    position: absolute;
+    left: 100%;
+    top: 100%;
+    opacity: 0;
+    -webkit-animation: loading 1.2s linear infinite;
+}
+
+#popup-confirm-mask {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 1000;
+}
+
+#popup-confirm {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 1001;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 165px 0 30px;
+    text-align: center;
+    border-radius: 8px;
+    background: #fff url(../img/bg-reset.png) no-repeat center top;
+    background-size: 300px 165px;
+}
+
+#popup-confirm .content {
+    border-top: 1px dashed #909090;
+    padding: 0 40px;
+}
+
+#popup-confirm .content .title {
+    font-size: 18px;
+    color: #333333;
+}
+
+#popup-confirm .content .message {
+    font-size: 14px;
+    color: #999999;
+    margin-top: 10px;
+    line-height: 20px;
+}
+
+#popup-confirm .btns {
+    margin-top: 30px;
+}
+
+#popup-confirm .btns .btn-cancel {
+    display: inline-block;
+    color: #43BB56;
+    font-size: 14px;
+    border: 1px solid #43BB56;
+    width: 98px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 4px;
+}
+
+#popup-confirm .btns .btn-confirm {
+    display: inline-block;
+    font-size: 14px;
+    color: #fff;
+    background-color: #39B844;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 20px;
+    border-radius: 4px;
+}
